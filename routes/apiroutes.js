@@ -18,6 +18,7 @@ module.exports = function(app) {
         try{
             const response = await db.Workout.create({type: "workout"})
             res.json(response);
+            console.log(response.totalDuration + "/api/workouts")
         }
         catch(err){
             console.log("error occurred creating a workout: ", err)
