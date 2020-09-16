@@ -1,4 +1,5 @@
-var db = require("../models");
+const router = require("express").Router();
+const Workout = require("../models/workout.js");
 
 module.exports = function(app) {
 
@@ -64,3 +65,4 @@ module.exports = function(app) {
         });
     }); 
 };
+module.exports = router;  
