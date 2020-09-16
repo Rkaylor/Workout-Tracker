@@ -50,13 +50,11 @@ module.exports = function(app) {
             if(err){
                 console.log(err)
             }
-
             })
-        }
+            }
             
-    })
-
-    app.get("/api/workouts/range", (req, res) => {
+        })
+        app.get("/api/workouts/range", (req, res) => {
         db.Workout.find({})
         .then(workout => {
             res.json(workout);

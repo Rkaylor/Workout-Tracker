@@ -47,7 +47,6 @@ const workoutSchema = new Schema(
 );
 //Addition of dynamically created properties
 workoutSchema.virtual("totalDuration").get(function() {
-//the sum of exercise durations
     return this.exercises.reduce((total, exercise) => {
     return total + exercise.duration;
   }, 0);
